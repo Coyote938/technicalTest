@@ -1,0 +1,269 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Screenshots</title>
+
+<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+<link rel="apple-touch-icon" sizes="57x57" href="apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+<!--[if IE 7]>
+<!--<link rel="stylesheet" href="font-awesome/css/font-awesome-ie7.min.css">-->
+
+<link rel="stylesheet" type="text/css" href="fontawesome-free-5.7.2-web/css/all.min.css">
+<link rel="stylesheet" type="text/css" href="fontawesome-free-5.7.2-web/css/v4-shims.min.css">
+
+<!-- JQuery -->
+<script type="text/javascript" src="scripts/jquery-1.11.1.min.js"></script><link rel="stylesheet" type="text/css" href="chartist/chartist-plugin-tooltip/dist/chartist-plugin-tooltip.min.css">
+<link rel="stylesheet" type="text/css" href="chartist/dist/chartist.min.css">
+<script src="chartist/dist/chartist.min.js"></script>
+<script src="chartist/chartist-plugin-tooltip/dist/chartist-plugin-tooltip.min.js"></script>
+<!-- Required Stylesheets -->
+<link href="bootstrap-treeview/dist/bootstrap-treeview.min.css" rel="stylesheet">
+
+<!-- Required Javascript -->
+<script src="bootstrap-treeview/dist/bootstrap-treeview.min.js"></script><!-- DataTables -->
+<link type="text/css" href="datatables/1.10.19/datatables.min.css" rel="stylesheet" />
+<script type="text/javascript" src="datatables/1.10.19/datatables.min.js"></script>
+<script type="text/javascript" src="datatables/1.10.19/time-elapsed-dhms.js"></script>
+
+<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<script src="bootstrap/js/bootstrap.min.js"></script>
+
+<script type="text/javascript" src="datatables/1.10.19/datatables.bootstrap4.min.js"></script>
+<link type="text/css" href="datatables/1.10.19/datatables.bootstrap4.min.css" rel="stylesheet" />
+
+<script>
+    jQuery.fn.dataTable.ext.type.order['time-elapsed-dhms-pre'] = function(data) {
+
+        var matches = data.match(/^(\d+(?:\.\d+)?)\s*([a-z]+)/i);
+        var multipliers = {
+            ms: 1,
+            s: 1000,
+            m: 60000,
+            h: 3600000,
+            d: 86400000
+        };
+
+        if (matches) {
+            var multiplier = multipliers[matches[2].toLowerCase()];
+            return parseFloat(matches[1]) * multiplier;
+        } else {
+            return -1;
+        };
+    };
+</script>
+<link rel="stylesheet" href="css/core.css"/>
+<link rel="stylesheet" href="css/link.css"/>
+<link type="text/css" media="screen" href="css/screen.css" rel="Stylesheet"/><!-- Nivo Slider -->
+<link rel="stylesheet" href="nivo-slider/3.2/nivo-slider.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="nivo-slider/3.2/themes/default/default.css" type="text/css" media="screen" />
+<script src="nivo-slider/3.2/jquery.nivo.slider.pack.js" type="text/javascript"></script>
+
+    <script type="text/javascript">
+
+        function getUrlVars() {
+            var vars = {};
+            var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function (m, key, value) {
+                vars[key] = value;
+            });
+            return vars;
+        }
+
+        var screenshotIndex = getUrlVars()["screenshot"];
+
+        $(window).load(function () {
+            $('#slider').nivoSlider({
+                startSlide: screenshotIndex,
+                effect: 'fade',
+                animSpeed: 200,
+                manualAdvance: true
+            });
+        });
+
+        $(window).keydown(function(e) {
+            switch(e.which) {
+                case 37:
+                    $('a.nivo-prevNav').click();
+                    break;
+                case 39:
+                    $('a.nivo-nextNav').click();
+                    break;
+            }
+        });
+    </script>
+
+</head>
+
+<body>
+<div id="topheader">
+    <div id="topbanner">
+        <div id="logo"><a href="index.html"><img src="images/serenity-logo.png" border="0"/></a></div>
+        <div id="projectname-banner" style="float:right">
+            <span class="projectname">
+                <span class="projecttitle"></span>
+                <span class="projectsubtitle"></span>
+            </span>
+        </div>
+    </div>
+</div>
+
+<div class="middlecontent">
+    <div id="contenttop">
+        <div class="middlebg">
+            <span class="breadcrumbs">
+                <a href="index.html">Home</a>
+                > <span class="truncate-40"><a
+                    href="590e89d10be8a88e8b767fba8713021323132dbb3135695e5d83adec460ea1f9.html">A User Wants Register In Web Site Utest.Com</a></span>
+                > <span class="truncate-60"><a
+                    href="50be4a2c41a391a47dd6c0d3d355f4fed83a51dbea2afbdb21cadd4455b35b86.html">Register an user correctly </a></span>
+                > Screenshots
+            </span>
+        </div>
+        <div class="rightbg"></div>
+    </div>
+
+    <div class="clr"></div>
+
+    <!--/* starts second table*/-->
+<div>
+    <ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#"><i class="fa fa-check-square-o"></i> Overall Test Results</a>
+        </li>
+        <li >
+            <a href="capabilities.html"><i class="fa fa-book"></i> Requirements</a>
+        </li>
+        <li >
+            <a href="576946480b52ad056d6f5bddf874399c83582ecf90963cc074a14c70580e7d9f.html"><i class="fa fa-comments-o"></i> Features</a>
+        </li>
+    </ul>
+    <span class="date-and-time"><a href="build-info.html"><i class="fa fa-info-circle"></i></a> Report generated 20-02-2021 12:38</span>
+    <br style="clear:left"/>
+</div>
+
+    <div class="clr"></div>
+
+
+    <div id="contentbody">
+        <div class="titlebar">
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td>
+                            <div>
+                                <h3 class="discreet-story-header">
+                                    <i class="fa fa-2x fa-comments-o"></i>
+                                    <span class="story-header-title">A User Wants Register In Web Site Utest.Com </span>
+                                    <span class="badge tag-badge" style="">Feature</span>
+                                </h3>
+
+                                <div class="discreet-requirement-narrative-title">
+                                I an user unregistered want register me in UTest<br />
+need go to register page<br />
+to register me
+                                </div>
+                            </div>
+
+                        </td>
+                        <td valign="top" align="right">
+                            <p class="tag">
+                                <span class="badge tag-badge" style="background:default;"
+                                    <i class="fa fa-tag"></i>&nbsp;<a class="tagLink" style="background:default;" href="6fe0671aeea9e76b6998ee682216d11c7748a4152740df0586f3c256ecb3f5da.html">Chrome
+                                    (context)</a>
+                                </span>
+                            </p>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td colspan="2" class="test-title-bar">
+                            <span class="outcome-icon"><a href='##beforetable'><i class='fa fa-check-circle-o success-icon fa-2x' title='SUCCESS'></i></a></span>
+                            <span class="test-case-title">
+                                <span class="success-color">Register an user correctly
+                                    <span class="related-issue-title"></span>
+                                </span>
+                            </span>
+
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="clr"></div>
+
+
+    <div id="beforetable"></div>
+    <div id="contenttilttle">
+        <div class="slider-wrapper theme-default">
+            <div id="slider">
+                <img src="0d5dbc6d713d66fc718340f081abaa72fda8f7ebd2f9f9395221ab895322419c.png" title=" Given An user want register in UTest.com" width="1034"/>
+                <img src="0d5dbc6d713d66fc718340f081abaa72fda8f7ebd2f9f9395221ab895322419c.png" title=" User navigate to" width="1034"/>
+                <img src="0d5dbc6d713d66fc718340f081abaa72fda8f7ebd2f9f9395221ab895322419c.png" title=" user opens the Home page" width="1034"/>
+                <img src="2c190479425e664d566cb792f79b1dbdeea6d4964548a06097f7dc5790493651.png" title=" User navigate to (completed)" width="1440"/>
+                <img src="2c190479425e664d566cb792f79b1dbdeea6d4964548a06097f7dc5790493651.png" title=" Given An user want register in UTest.com (completed)" width="1440"/>
+                <img src="eba391f2d653528173a5ce4e455cb00b56bc92014aaa4138b6c111b8a71cc5c8.png" title=" And The user go to register page" width="1440"/>
+                <img src="eba391f2d653528173a5ce4e455cb00b56bc92014aaa4138b6c111b8a71cc5c8.png" title=" User go to register page" width="1440"/>
+                <img src="eba391f2d653528173a5ce4e455cb00b56bc92014aaa4138b6c111b8a71cc5c8.png" title=" user clicks on go to register" width="1440"/>
+                <img src="eba391f2d653528173a5ce4e455cb00b56bc92014aaa4138b6c111b8a71cc5c8.png" title=" User go to register page (completed)" width="1440"/>
+                <img src="45ed938a7aff696d924342ff96c73b5e09600a4ee3224206ba7f0d9b9421223b.png" title=" And The user go to register page (completed)" width="1440"/>
+                <img src="45631fd384b00b2f3a0194485f21b0d50cd0b016a1dd239836ae731c3ef0135f.png" title=" When The user register the personal data
+| firstname | lastname | email | month | day | year | language | city | zip | country | computer | version | pclanguage | mobile | model | password | confirmpaswword |
+| Juan | Castillo | 123abc@test.com | February | 24 | 1996 | German | Mexico | 122106 | Mexico | Linux | Kali | Russian | BlackBerry | Q5 | Abc123.*-/ | Abc123.*-/ |" width="1440"/>
+                <img src="45631fd384b00b2f3a0194485f21b0d50cd0b016a1dd239836ae731c3ef0135f.png" title=" User fill register data page" width="1440"/>
+                <img src="45631fd384b00b2f3a0194485f21b0d50cd0b016a1dd239836ae731c3ef0135f.png" title=" user enters 'Juan' into Name" width="1440"/>
+                <img src="57ff92bd2feb02031a99f2e8f1fcbe02f99a871fe2674c9f476a3abe854fe666.png" title=" user enters 'Juan' into Name (completed)" width="1440"/>
+                <img src="7fe691842d1b9a7265a4b7e9aa66578f33546e6297dea43db3fee248e6ba0c21.png" title=" user enters 'Castillo' into LastName" width="1440"/>
+                <img src="2bc986004647f76b4a333ff6786c0ae2beda407904a9eea9858a3fda418a9ac9.png" title=" user enters 'Castillo' into LastName (completed)" width="1440"/>
+                <img src="2bc986004647f76b4a333ff6786c0ae2beda407904a9eea9858a3fda418a9ac9.png" title=" user enters '123abc@test.com' into Email" width="1440"/>
+                <img src="c1c4a69dd1e51dbcd993da2f6738879e6252e5ffedc998c23e71f41b7812d8f1.png" title=" user enters '123abc@test.com' into Email (completed)" width="1440"/>
+                <img src="c1c4a69dd1e51dbcd993da2f6738879e6252e5ffedc998c23e71f41b7812d8f1.png" title=" user enters 'February' into Birth Month" width="1440"/>
+                <img src="39e18af809231807fa4d345161e42130144b22d364d520a1c28ed84c05dd5ae5.png" title=" user enters 'February' into Birth Month (completed)" width="1440"/>
+                <img src="39e18af809231807fa4d345161e42130144b22d364d520a1c28ed84c05dd5ae5.png" title=" user enters '24' into Birth Day" width="1440"/>
+                <img src="31906c6b196d013bf6e24e4b0a04638da59f06aa0c64e01444884284e6ad067a.png" title=" user enters '24' into Birth Day (completed)" width="1440"/>
+                <img src="31906c6b196d013bf6e24e4b0a04638da59f06aa0c64e01444884284e6ad067a.png" title=" user enters '1996' into Birth Year" width="1440"/>
+                <img src="57e276d3370e45e76b2fccb87010cdc7714bbd55c1d352bee5696d9f39a998ce.png" title=" user enters '1996' into Birth Year (completed)" width="1440"/>
+                <img src="57e276d3370e45e76b2fccb87010cdc7714bbd55c1d352bee5696d9f39a998ce.png" title=" user enters 'German' into Language" width="1440"/>
+                <img src="8a50f67b033e525f9e952adb875f089e4ab2324af2a222df30a0dbabc165d6da.png" title=" user enters 'German' into Language (completed)" width="1440"/>
+                <img src="8a50f67b033e525f9e952adb875f089e4ab2324af2a222df30a0dbabc165d6da.png" title=" user enters ENTER into Language" width="1440"/>
+                <img src="99999ecc68edf796b9c43a79865cbb58d97b9fcb0757233a43cdd76a69abe4e0.png" title=" user enters ENTER into Language (completed)" width="1440"/>
+                <img src="99999ecc68edf796b9c43a79865cbb58d97b9fcb0757233a43cdd76a69abe4e0.png" title=" user clicks on Next" width="1440"/>
+                <img src="164767f4e44e497822d99819f79490e4db3f6ae4f6e3634ff319674ed4dd056b.png" title=" user clicks on Next (completed)" width="1440"/>
+                <img src="164767f4e44e497822d99819f79490e4db3f6ae4f6e3634ff319674ed4dd056b.png" title=" User fill register data page (completed)" width="1440"/>
+                <img src="07399e6f0765c86f8490909c907f9d35c85f74ca3487f7c620711b613925af22.png" title=" When The user register the personal data
+| firstname | lastname | email | month | day | year | language | city | zip | country | computer | version | pclanguage | mobile | model | password | confirmpaswword |
+| Juan | Castillo | 123abc@test.com | February | 24 | 1996 | German | Mexico | 122106 | Mexico | Linux | Kali | Russian | BlackBerry | Q5 | Abc123.*-/ | Abc123.*-/ | (completed)" width="1440"/>
+                <img src="e9ccf182ee82c815899c1fd5f8cb73b807d4e2465be13747bd77b51d95cca857.png" title=" Then Verify message of registration satisfactly: <span class='success-color'>SUCCESS</span>" width="1440"/>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+<div id="beforefooter"></div>
+<div id="bottomfooter">
+    <span class="version">Serenity BDD version 2.1.2</span>
+</div>
+</body>
+</html>

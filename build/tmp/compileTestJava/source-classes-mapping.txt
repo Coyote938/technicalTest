@@ -1,0 +1,4 @@
+technicalTest/runners/register_user.java
+ technicalTest.runners.register_user
+technicalTest/stepDefinitions/register_user_step_definition.java
+ technicalTest.stepDefinitions.register_user_step_definition

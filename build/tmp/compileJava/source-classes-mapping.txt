@@ -1,0 +1,19 @@
+technicalTest/userInterface/go_register_page.java
+ technicalTest.userInterface.go_register_page
+technicalTest/tasks/navigate_to.java
+ technicalTest.tasks.navigate_to
+technicalTest/exceptions/error_navigate_to.java
+ technicalTest.exceptions.error_navigate_to
+technicalTest/userInterface/register_personal_data_page.java
+ technicalTest.userInterface.register_personal_data_page
+technicalTest/utils/read.java
+ technicalTest.utils.read
+technicalTest/model/user.java
+ technicalTest.model.user
+technicalTest/tasks/go_to_register_page.java
+ technicalTest.tasks.go_to_register_page
+technicalTest/interactions/fill_register_data_page.java
+ technicalTest.interactions.fill_register_data_page
+ technicalTest.interactions.fill_register_data_page$FillRegisterDataPage
+technicalTest/userInterface/home_page.java
+ technicalTest.userInterface.home_page
