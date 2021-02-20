@@ -39,6 +39,8 @@ public class register_user_step_definition {
     public void theUserRegisterThePersonalData(DataTable data) throws InterruptedException {
         read.the(data);
         theActorInTheSpotlight().attemptsTo(fill_register_data_page.FillRegisterDataPage.FieldsFill());
+        Thread.sleep(3000);
+        theActorInTheSpotlight().attemptsTo(fill_register_location_page.FillRegisterLocationPage.FieldsFill());
     }
 
 

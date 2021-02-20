@@ -17,3 +17,8 @@ technicalTest/interactions/fill_register_data_page.java
  technicalTest.interactions.fill_register_data_page$FillRegisterDataPage
 technicalTest/userInterface/home_page.java
  technicalTest.userInterface.home_page
+technicalTest/interactions/fill_register_location_page.java
+ technicalTest.interactions.fill_register_location_page
+ technicalTest.interactions.fill_register_location_page$FillRegisterLocationPage
+technicalTest/userInterface/register_location_page.java
+ technicalTest.userInterface.register_location_page
