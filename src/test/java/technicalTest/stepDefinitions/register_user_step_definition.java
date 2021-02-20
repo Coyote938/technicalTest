@@ -41,6 +41,8 @@ public class register_user_step_definition {
         theActorInTheSpotlight().attemptsTo(fill_register_data_page.FillRegisterDataPage.FieldsFill());
         Thread.sleep(3000);
         theActorInTheSpotlight().attemptsTo(fill_register_location_page.FillRegisterLocationPage.FieldsFill());
+        Thread.sleep(3000);
+        theActorInTheSpotlight().attemptsTo(fill_register_devices_page.FillRegisterLocationPage.FieldsFill());
     }
 
 
