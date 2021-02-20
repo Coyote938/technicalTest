@@ -12,7 +12,7 @@ import net.serenitybdd.screenplay.actions.SendKeys;
 import static technicalTest.userInterface.register_devices_page.*;
 
 public class fill_register_devices_page {
-    public static class FillRegisterLocationPage implements Task {
+    public static class FillRegisterDevicesPage implements Task {
         @Override
         public <T extends Actor> void performAs(T actor) {
             actor.attemptsTo(
@@ -37,8 +37,8 @@ public class fill_register_devices_page {
             );
         }
 
-        public static FillRegisterLocationPage FieldsFill() {
-            return Tasks.instrumented(FillRegisterLocationPage.class);
+        public static FillRegisterDevicesPage FieldsFill() {
+            return Tasks.instrumented(FillRegisterDevicesPage.class);
 
         }
     }

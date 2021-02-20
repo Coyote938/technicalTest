@@ -42,7 +42,9 @@ public class register_user_step_definition {
         Thread.sleep(3000);
         theActorInTheSpotlight().attemptsTo(fill_register_location_page.FillRegisterLocationPage.FieldsFill());
         Thread.sleep(3000);
-
+        theActorInTheSpotlight().attemptsTo(fill_register_devices_page.FillRegisterDevicesPage.FieldsFill());
+        Thread.sleep(3000);
+        theActorInTheSpotlight().attemptsTo(fill_register_password_page.FillRegisterPasswordPage.FieldsFill());
     }
 
 
